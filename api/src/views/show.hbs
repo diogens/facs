@@ -1,0 +1,54 @@
+<div>
+  <h1>{{ title }}</h1>
+  <form action="/api/update/{{id}}" method="PUT">
+    <div>
+      {{#each dados}}
+        <div id="form" >
+          <input placeholder="Text input" type="text" value="{{@key}}">
+          <input placeholder="Text input" type="text" value="{{this}}">
+        </div>
+      {{/each}}  
+    </div>
+  </form>
+
+  <div class="buttons">
+    <button onclick="addInput()"  href="#">Novo campo</button> 
+    <a href="http://localhost:8080/api/list">Salvar</a> 
+    <a href="http://localhost:8080/api/list">Voltar</a> 
+  </div>
+</div>
+
+<script>
+  function addInput() { 
+    var item = prompt('Insira um valor chave', '');
+    var form = document.createElement("input").setAttribute('name', item);
+    console.log(form)  
+    var input = document.createElement("input");
+    var label = document.createElement("label");
+    var text = document.createTextNode(item)
+
+    var del = document.createElement('input')
+    
+    input.setAttribute('name', item);
+    input.setAttribute('placeholder', 'Insira um valor');
+    input.setAttribute('class', 'form-control');
+
+    del.setAttribute('type', 'button')
+    del.setAttribute('value', 'Deletar')
+    del.setAttribute('id', 'btnDeletar')
+
+    if(item === null || item === '') {
+      return false
+    } else {
+      document.getElementById("form").appendChild(text);
+      document.getElementById("form").appendChild(input);
+      document.getElementById("form").appendChild(del);
+      document.getElementById("btnDeletar").onclick = function() {
+        console.log('oi')
+        document.getElementById("form").remove(text);
+        document.getElementById("form").remove(input);
+        document.getElementById("form").remove(del);
+      }
+    }
+  }
+</script>
