@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My CRUD in NodeJS</title>
+</head>
+<body>
+
+    <h2>Registrar<h2>
+    <form action="/show" method="POST">
+        <input type="text" placeholder="Game" name="name"><br>
+        <input type="file" placeholder="Imagem" name="image"><br>
+        <input type="text" placeholder="Publisher" name="publisher"><br>
+        <input type="text" placeholder="Desenvolvedora" name="desenvolvedora"><br>
+        <textarea type="text" placeholder="Descrição" name="descricao"></textarea><br>
+        <input type="date" placeholder="Data de lançamento" name="lancamento"><br>
+        <input type="number" placeholder="Preço" name="preco"><br>
+        <input type="number" placeholder="Nota" name="nota"><br>
+        <select type="text" placeholder="Tipo" name="tipo">
+          <option value="Rpg" >Rpg</option>
+          <option value="Ação">Ação</option>
+          <option value="Violencia">Violencia</option>
+          <option value="Sexo">Sexo</option>
+          <option value="Drogas">Drogas</option>
+          <option value="Putaria">Putaria</option>
+        </select>
+        <select type="text" placeholder="Linguagem" name="lingua">
+          <option value="Portugues">Portugues</option>
+          <option value="Ingles">Ingles</option>
+          <option value="Japones">Japones</option>
+          <option value="Espanho">Espanho</option>
+          <option value="Italiano">Italiano</option>
+        </select>
+        <button type="submit">Submit</button>
+    </form> 
+
+</body>
+</html>
