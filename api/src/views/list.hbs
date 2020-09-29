@@ -5,27 +5,26 @@
     <div>
       <div class="container-line">
         <span class="line">
-          aass
           <h2>{{@key}}</h2>
-          <h2 >{{this.name}}</h2>
-          <h2 >{{this.email}}</h2>
-          <h2 >{{this.sobrenome}}</h2>
+          <h2>{{this.name}}</h2>
+          <h2>{{this.email}}</h2>
+          <h2>{{this.sobrenome}}</h2>
         </span>
         <a href="http://localhost:4000/api/edit/{{this.id}}" class="card-link">Editar</a>
         <a href="http://localhost:4000/api/delete/{{this.id}}" class="card-link">Deletar</a>
       </div>
-    </div>     
-    {{/each}}  
+    </div>
+    {{/each}}
   </ul>
 
-  <div >
-    <a  href="http://localhost:4000/api/register">Cadastrar</a> 
+  <div>
+    <a href="http://localhost:4000/api/register">Cadastrar</a>
   </div>
 </div>
 
 
 <style>
-  .line{
+  .line {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -36,7 +35,8 @@
     margin: auto 10px;
     padding: auto 10px;
   }
-  .container-line{
+
+  .container-line {
     display: flex;
     flex-direction: row;
     justify-content: center;

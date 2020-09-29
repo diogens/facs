@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
- 
- <title>ATIVIDADE</title>
 
-<style>
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  .container{
-    width: 800px;
-    margin: 0 auto;
-  }
-</style>
+  <title>ATIVIDADE</title>
 
- 
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      width: 800px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 8fr;
+    }
+  </style>
+
+
 </head>
+
 <body>
   {{> header}}
-  <div class="container" >
-    {{{body}}}
+  <div class="container">
+    <div>
+      <ul>
+        <li>Viado</li>
+        <li>Viado2</li>
+        <li>Viado3</li>
+      </ul>
+    </div>
+    <div>{{{body}}}</div>
   </div>
-  {{> footer}}  
+  {{> footer}}
 </body>
+
 </html>
-
-
-
-
