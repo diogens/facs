@@ -3,8 +3,6 @@ const app = express();
 require("dotenv").config();
 const bodyparser = require("body-parser");
 
-const ObjectId = require("mongodb").ObjectID;
-
 const MongoClient = require("mongodb").MongoClient;
 const uri = `mongodb+srv://${process.env.USER}:${process.env.SENHA}@cluster0.awox0.mongodb.net/${process.env.BANCO}?retryWrites=true&w=majority`;
 
@@ -21,4 +19,4 @@ app.use(bodyparser.urlencoded({ extended: true }));
 
 app.set("view engine", "ejs");
 
-app.use("/", "./router.js");
+app.use(require("./router"));

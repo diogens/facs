@@ -1,13 +1,20 @@
+const express = require("express");
+const app = express();
+
+app.set("view engine", "ejs");
+
+const ObjectId = require("mongodb").ObjectID;
+
 app.get("/", function (req, res) {
   res.render("home");
 });
 
 app.get("/", (req, res) => {
-  var cursor = db.collection("data").find();
+  var cursor = db.collection("game").find();
 });
 
 app.get("/show", (req, res) => {
-  db.collection("data")
+  db.collection("game")
     .find()
     .toArray((err, results) => {
       if (err) return console.log(err);
@@ -18,7 +25,7 @@ app.get("/show", (req, res) => {
 app.post("/show", (req, res) => {
   console.log(req.body);
   //criar a coleção “data”, que irá armazenar nossos dados
-  db.collection("data").save(req.body, (err, result) => {
+  db.collection("game").save(req.body, (err, result) => {
     if (err) return console.log(err);
 
     console.log("Salvo no Banco de Dados");
@@ -31,7 +38,7 @@ app
   .get((req, res) => {
     var id = req.params.id;
 
-    db.collection("data")
+    db.collection("game")
       .find(ObjectId(id))
       .toArray((err, result) => {
         if (err) return res.send(err);
@@ -43,7 +50,7 @@ app
     var name = req.body.name;
     var surname = req.body.surname;
 
-    db.collection("data").updateOne(
+    db.collection("game").updateOne(
       { _id: ObjectId(id) },
       {
         $set: {
@@ -62,9 +69,11 @@ app
 app.route("/delete/:id").get((req, res) => {
   var id = req.params.id;
 
-  db.collection("data").deleteOne({ _id: ObjectId(id) }, (err, result) => {
+  db.collection("game").deleteOne({ _id: ObjectId(id) }, (err, result) => {
     if (err) return res.send(500, err);
     console.log("Deletado do Banco de Dados!");
     res.redirect("/show");
   });
 });
+
+module.exports = app;

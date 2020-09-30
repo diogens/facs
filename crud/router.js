@@ -1,8 +1,7 @@
 const express = require("express");
-const app = express();
+const app = express.Router();
 
-const diogenes = require("./diogenes");
-const guilherme = require("./guilherme");
+app.use("/dio", require("./diogenes"));
+app.use("/gui", require("./guilherme"));
 
-app.use(diogenes);
-app.use(guilherme);
+module.exports = app;
