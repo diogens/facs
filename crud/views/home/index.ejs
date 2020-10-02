@@ -1,48 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>My CRUD in NodeJS</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
+
 <body>
   <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="localhost:3000/gui" target="_blank">Guilherme's CRUD</a>
+    <a class="navbar-brand" href="/dio/show">Listagem</a>
   </nav>
   <div class="container">
     <div class="tooltip-inner">Registrar</div>
-    <form action="/show" method="POST">
-        <input class="form-control" type="text" placeholder="Game" name="name"><br>
-        <input class="form-control-file" type="file" placeholder="Imagem" name="image"><br>
-        <input class="form-control" type="text" placeholder="Publisher" name="publisher"><br>
-        <input class="form-control" type="text" placeholder="Desenvolvedora" name="desenvolvedora"><br>
-        <textarea class="form-control" type="text" placeholder="Descrição" name="descricao" style="height: 300px;"></textarea><br>
-        <input class="form-control" type="date" placeholder="Data de lançamento" name="lancamento"><br>
-        <input class="form-control" type="number" placeholder="Preço" name="preco"><br>
-        <input class="form-control" type="number" placeholder="Nota" name="nota"><br>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 30px;">
-          <select class="form-control" type="text" placeholder="Tipo" name="tipo" >
-            <option value="Rpg" >Rpg</option>
-            <option value="Ação">Ação</option>
-            <option value="Violencia">Violencia</option>
-            <option value="Sexo">Sexo</option>
-            <option value="Corrida">Corrida</option>
-            <option value="Plataforma">Plataforma</option>
-            <option value="Online">Online</option>
-            <option value="FPS">FPS</option>
-            <option value="Retro">Retro</option>
-          </select>
-          <select class="form-control" type="text" placeholder="Linguagem" name="lingua">
-            <option value="Português">Português</option>
-            <option value="Ingles">Ingles</option>
-            <option value="Japones">Japones</option>
-            <option value="Espanho">Espanho</option>
-            <option value="Italiano">Italiano</option>
-          </select>
-        </div>
-        <button class="btn btn-primary" style="width: 100%;" type="submit">Submit</button>
-    </form> 
-  </h2>
+    <form action="/dio/show" method="POST">
+      <input class="form-control" type="text" placeholder="Game" name="name"><br>
+      <input class="form-control-file" type="file" placeholder="Imagem" name="image"><br>
+      <input class="form-control" type="text" placeholder="Publisher" name="publisher"><br>
+      <input class="form-control" type="text" placeholder="Desenvolvedora" name="desenvolvedora"><br>
+      <textarea class="form-control" type="text" placeholder="Descrição" name="descricao"
+        style="height: 300px;"></textarea><br>
+      <input class="form-control" type="date" placeholder="Data de lançamento" name="lancamento"><br>
+      <input class="form-control" type="number" placeholder="Preço" name="preco"><br>
+      <input class="form-control" type="number" placeholder="Nota" name="nota"><br>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 30px;">
+        <select class="form-control" type="text" placeholder="Tipo" name="tipo">
+          <option value="Rpg">Rpg</option>
+          <option value="Ação">Ação</option>
+          <option value="Violencia">Violencia</option>
+          <option value="Sexo">Sexo</option>
+          <option value="Corrida">Corrida</option>
+          <option value="Plataforma">Plataforma</option>
+          <option value="Online">Online</option>
+          <option value="FPS">FPS</option>
+          <option value="Retro">Retro</option>
+        </select>
+        <select class="form-control" type="text" placeholder="Linguagem" name="lingua">
+          <option value="Português">Português</option>
+          <option value="Ingles">Ingles</option>
+          <option value="Japones">Japones</option>
+          <option value="Espanho">Espanho</option>
+          <option value="Italiano">Italiano</option>
+        </select>
+      </div>
+      <button class="btn btn-primary" style="width: 100%;" type="submit">Submit</button>
+    </form>
+    </h2>
 </body>
+
 </html>

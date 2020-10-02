@@ -10,19 +10,20 @@
 
 <body>
   <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="localhost:3000/gui" target="_blank">Guilherme's CRUD</a>
-    <a class="navbar-brand" href="/dio">Cadastro</a>
+    <a class="navbar-brand" href="localhost:3000/dio" target="_blank">Diogenes' CRUD</a>
+    <a class="navbar-brand" href="/gui">Cadastro</a>
   </nav>
   <div class="container">
+    <div class="h1 text-center">CRUD do Guilherme:</div>
     <div class="tooltip-inner">Registros</div>
     <table class="table table-striped">
       <thead>
         <tr>
           <td class="col">Nome</td>
-          <td class="col">Publisher</td>
-          <td class="col">Desenvolvedora</td>
-          <td class="col">Lancamento</td>
+          <td class="col">Autor</td>
+          <td class="col">Versão</td>
           <td class="col">Preço</td>
+          <td class="col">Nota</td>
           <td class="col">Tipo</td>
           <td class="col">Lingua</td>
           <td class="col">Ação</td>
@@ -40,16 +41,16 @@
           <td><%= details.lingua %></td>
           <td>
             <span style="display: flex; flex-direction: row">
-              <a class="btn btn-warning" href="/dio/edit/<%= details._id %>">Editar</a>
+              <a class="btn btn-warning" href="/gui/edit2/<%= details._id %>">Editar</a>
               <span style="padding: 10px"> </span>
-              <a class="btn btn-danger" href="/dio/delete/<%= details._id %>">Deletar</a>
+              <a class="btn btn-danger" href="/gui/delete/<%= details._id %>">Deletar</a>
             </span>
           </td>
         </tr>
         <% }) %>
       </tbody>
     </table>
-    <a class="btn btn-primary" href="/">Novo</a>
+    <a class="btn btn-primary" href="/gui">Novo</a>
   </div>
 </body>
 

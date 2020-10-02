@@ -60,7 +60,7 @@ app
       },
       (err, result) => {
         if (err) return res.send(err);
-        res.redirect("/show");
+        res.redirect("/dio/show");
         console.log("Atualizado no Banco de Dados");
       }
     );
@@ -72,7 +72,7 @@ app.route("/delete/:id").get((req, res) => {
   db.collection("game").deleteOne({ _id: ObjectId(id) }, (err, result) => {
     if (err) return res.send(500, err);
     console.log("Deletado do Banco de Dados!");
-    res.redirect("/show");
+    res.redirect("/dio/show");
   });
 });
 

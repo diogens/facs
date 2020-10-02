@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My CRUD in NodeJS</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h2>Editar Livro</h2>
+    <% data.forEach(function(details) { %>
+    <form action="/gui/edit2/<%= details._id %>" method="POST">
+      <input type="text" value="<%= details.name %>" name="name" />
+      <input type="text" value="<%= details.surname %>" name="surname" />
+      <br />
+      <button><a href="/gui/show2">Todos</a></button>
+      <button type="submit">Editar</button>
+    </form>
+    <% }) %>
+  </body>
+</html>

@@ -20,3 +20,7 @@ app.use(bodyparser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 
 app.use(require("./router"));
+
+app.get("/", function (req, res) {
+  res.render("menu");
+});
