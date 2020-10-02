@@ -1,25 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <title>My CRUD in NodeJS</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+</head>
+
+<body class="container">
     <h2>Editar Livro</h2>
     <% data.forEach(function(details) { %>
     <form action="/gui/edit2/<%= details._id %>" method="POST">
-      <input type="text" value="<%= details.name %>" name="name" />
-      <input type="text" value="<%= details.surname %>" name="surname" />
-      <br />
-      <button><a href="/gui/show2">Todos</a></button>
-      <button type="submit">Editar</button>
+        Nome:
+        <input class="form-control" type="text" value="<%= details.name %>" name="name" />
+        Imagem:
+        <input class="form-control" type="file" value="<%= details.image %>" name="image" />
+        Autor:
+        <input class="form-control" type="text" value="<%= details.publisher %>" name="publisher" />
+        Versão:
+        <input class="form-control" type="text" value="<%= details.desenvolvedora %>" name="desenvolvedora" />
+        Sinópse:
+        <input class="form-control" type="text" value="<%= details.descricao %>" name="descricao" />
+        Lançamento:
+        <input class="form-control" type="text" value="<%= details.lancamento %>" name="lancamento" />
+        Preço:
+        <input class="form-control" type="number" value="<%= details.preco %>" name="preco" />
+        Nota:
+        <input class="form-control" type="number" value="<%= details.nota %>" name="nota" />
+        Tipo:
+        <select class="form-control" value="<%= details.tipo %>" name="tipo">
+            <option value="Administracao">Administração</option>
+            <option value="Agropecuaria">Agropecuária</option>
+            <option value="Ciencias Exatas">Ciências Exatas</option>
+            <option value="Contabilidade">Contabilidade</option>
+            <option value="Cursos e Idiomas">Cursos e Idiomas</option>
+            <option value="Didaticos">Didáticos</option>
+            <option value="Engenharia e Tecnologia">Engenharia e Tecnologia</option>
+            <option value="Esportes e lazer">Esportes e lazer</option>
+            <option value="Religiao">Religião</option>
+        </select>
+        Lingua:
+        <select class="form-control" type="text" value="<%= details.tipo %>" name="lingua">
+            <option value="Português">Português</option>
+            <option value="Ingles">Inglês</option>
+            <option value="Alemao">Alemão</option>
+            <option value="Japones">Japonês</option>
+            <option value="Espanhol">Espanhol</option>
+            <option value="Italiano">Italiano</option>
+            <option value="Sueco">Sueco</option>
+            <option value="Polones">Polonês</option>
+            <option value="Russo">Russo</option>
+        </select>
+        <br />
+        <button><a href="/gui/show2">Todos</a></button>
+        <button type="submit">Editar</button>
     </form>
     <% }) %>
-  </body>
+</body>
+
 </html>
