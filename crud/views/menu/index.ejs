@@ -8,17 +8,29 @@
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <style>
+        body {
+            background-image: url("https://miro.medium.com/max/3840/1*QDQvlCg420lzRElCK4AYhw.png");
+            height: 100vh;
+        }
+
         .container {
-            border: 2px gray solid;
-            margin-top: 250px;
+            background-color: white;
+        }
+
+        a {
+            color: #000;
+        }
+
+        a:hover {
+            color: #61dafb;
         }
     </style>
 </head>
 
-<body>
+<body class="d-flex justify-content-center align-items-center">
     <div class="container">
         <div class="h1 text-center">Menu</div>
-        <div style="background-color: lightblue;" class="h3 text-center">Escolha o CRUD:</div>
+        <div style="background-color: #61dafb;" class="h3 text-center">Escolha o CRUD:</div>
 
         <div style="height: 20vh;" class="w-100 d-flex flex-column align-items-center justify-content-around h4"
             id="container">
